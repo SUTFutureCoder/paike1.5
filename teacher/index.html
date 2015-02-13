@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>教师登录</title>
+</head>
+
+<body>
+<form name="form">
+帐号：
+<input type="text"  name="teacher_id"/>
+<p>
+密码：
+<input type="password" name="teacher_psw"/>
+<p>
+<input type="button" value="登录" onclick="Submit()"/>
+</form>
+</body>
+<script language="javascript" type="text/javascript" src="../include/js/Jquery.js">
+</script>
+<script>
+function Submit()
+{
+	
+	var teacher_id = document.form.teacher_id.value;
+	var teacher_psw = document.form.teacher_psw.value;
+	$.ajax({
+   		type: "POST",
+  		url: "login.ajax.php",
+  	 	data: "teacher_id="+teacher_id+"&teacher_psw="+teacher_psw,
+   		success: function(msg)
+		{
+			//alert(msg);
+			if(msg=='1')
+				window.location.href = "index.php";
+			else if(msg=='2')
+				window.location.href = "../admin/index.php";
+			else
+				alert("帐号或密码错误");
+   		}
+	   }); 
+}
+</script>
+</html>

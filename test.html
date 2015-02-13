@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+    <title>
+    </title>
+    <script src="include/js/Jquery.js">
+	</script>
+</head>
+<style>
+#header
+{
+	background-color:#333;
+	height:50px;
+	margin-top:-20px;
+	margin-left:-10px;
+	margin-right:-10px;
+	font-family:微软雅黑;
+}
+.one_li
+{
+	float:left;
+	width:100px;
+	text-align:center;
+	list-style:none;
+}
+#two{
+	display:none;
+}
+#header a:hover #two{
+	display:block;
+	position:absolute;
+	top:45px;
+	left:-2px;
+	z-index:10;
+}
+#two li
+{
+	background-color:#333;
+	width:100px;
+	text-align:center;
+	list-style:none;
+	height:40px;
+	border-top:1px solid #FFF;
+}
+#two li:hover{
+	background-color:#000;
+}
+
+#three
+{
+	display:none;
+}
+#header a:hover #three{
+	display:block;
+	position:absolute;
+	top:45px;
+	left:98px;
+	z-index:10;
+}
+
+#three li
+{
+	background-color:#333;
+	width:100px;
+	text-align:center;
+	list-style:none;
+	height:40px;
+	border-top:1px solid #FFF;
+}
+
+#three li:hover{
+	background-color:#000;
+}
+a{
+	color:#FFF;
+	text-decoration:none;
+	 line-height:50px;
+	 display:block;
+}
+a:hover{
+	background-color:#000;
+}
+
+.triangle
+{
+	margin-top:100px;
+	border:solid;
+	border-color:transparent rgba(0,0,0,.9) transparent transparent;
+	border-width:0 15px 15px 0;
+	width:0;
+	height:0;
+}
+
+#contest{
+	background-color:#FFF;
+	/*position:absolute;
+	top:7%;
+	left:13%;
+	margin-left:auto;
+	margin-right:auto;*/
+	position:relative;
+	top:40px;
+	margin:0 auto;
+	width:1000px;
+	height:800px;
+	
+	box-shadow:0px 0px 50px #000;
+	border-radius:5px;
+}
+
+.header{
+	background-color:#1D1B17;
+	/*background-color:rgba(0,0,0,.9);*/
+	height:45px;
+	margin-top:-20px;
+	margin-left:-20px;
+	margin-right:-20px;
+	box-shadow:0px 0px 50px #FFF;
+	background-image:-moz-linear-gradient(hsla(0,0%,100%,.3),hsla(0,0%,100%,0) 30px);
+	background-image:-webkit-gradient(linear,0 0,0 30,from(hsla(0,0%,100%,.3)),to(hsla(0,0%,100%,0)));
+}
+
+
+.button {
+	line-height:20px;
+	font-size:16px;
+	text-align:center;
+	padding:10px 15px;
+	background-color:#1D1B17;
+	color:#FFF;
+	border:solid;
+	border-width:1px;
+	font-family:微软雅黑;
+	border-radius:4px;
+	background-image:-webkit-gradient(linear,0 0,0 30,from(hsla(0,0%,100%,.3)),to(hsla(0,0%,100%,0)));
+
+}
+.button:hover {
+	background-color:#000;
+	cursor:pointer;
+   /*box-shadow:0px 0px 20px #000;*/
+   border-radius:1px;
+   text-shadow:0 0 20px #FFF;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+</style>
+<body>
+<div id="header">
+<ul id="one">
+    <li class="one_li"><a href="#" class="header_first">首页
+    	<span id="two">
+       		<ul>
+            	<li onclick="Move()">数字工大</li>
+                <li>个人中心</li>
+                <li>工大官网</li>
+            </ul>
+        </span>
+		</a>
+    </li>
+    <li class="one_li"><a href="#" class="header_first">个人中心
+    	<span id="three">
+       		<ul>
+            	<li onclick="Move()">数字工大</li>
+                <li>个人中心</li>
+                <li>工大官网</li>
+            </ul>
+        </span>
+    	</a></li>
+    <li class="one_li"><a href="#" class="header_first" target="_blank">数字工大</a></li>
+    <li class="one_li"><a href="#" class="header_first" target="_blank">工大官网</a></li>
+    <li class="one_li"><a class="#" onclick="zhuxiao()">注销</a></li>
+</ul>
+</div>
+
+
+<div class="jiao">
+</div>
+<br /><br />
+<audio src="downloads/Wax - 为你补妆.mp3">
+您的浏览器不支持audio
+</audio>
+<form>
+	<input type="button" value="查&nbsp;询"; class="button"/>
+    <input type="button" value="按教师查询"; class="button"/>
+</form>
+
+<canvas id="myCanvas"></canvas>
+
+<style>
+div.tab
+{
+	background-color:#999;
+}
+.tab ul li
+{
+	list-style:none;
+	float:left;
+}
+.tab ol li
+{
+	clear:both;
+}
+.normal
+{
+	color:#000;
+}
+.none
+{
+	display:none;
+}
+.show
+{
+	display:block;
+}
+.hover
+{
+	color:#0CC;
+}
+img
+{
+	position:absolute;
+}
+</style>
+<div class="tab">
+	<ul>
+    	<li>tab1</li>
+        <li>tab2</li>
+        <li>tab3</li>
+    </ul>
+    <ol>
+    	<li><img src="../Online_system/image/樊毅伟.gif" alt="樊毅伟"/></li>
+    </ol>
+</div>
+
+<div>
+	<dl>
+    	<dt>樊毅伟</dt>
+        <dd>张官军</dd>
+    </dl>
+</div>
+
+
+<div class="img">
+	<img src="../sutacm/logo/one.jpg" />
+
+</div>
+<br /><br /><br /><br />
+<script>
+
+	$(".img img").eq(0).slideDown(3000,function()
+	{
+		
+		$(this).slideUp(3000);
+	});
+	
+	$(function(){
+		var $uli = $(".tab ul li");
+		var $oli = $(".tab ol li");
+		/*$($oli[0]).css({'display':'none'});
+		$($oli[1]).css({'display':'none'});*/
+		$uli.className="hover";
+		$oli.className="show";
+		$uli.each(function(n) {
+           $(this).mouseover(function(){
+			   $uli.css('cursor','pointer');
+			   $uli.removeClass().addClass("normal");
+			   $(this).removeClass().addClass("hover");
+			   $oli.removeClass().addClass("none");
+			   if(n==0)
+			   {
+				   name = "樊毅伟";
+				}
+				else if(n==1)
+				{
+					name = "王猛";
+				}
+				else
+				{
+					 name = "王珏鑫";
+				}
+			   $($oli[0]).html("<img src=../Online_system/image/"+name+".gif alt=樊毅伟/>");
+			   $($oli[0]).removeClass().addClass("show");
+			   }
+		   ) 
+        });
+		});
+		
+		/*for(i=0;i<5;i++)
+		{
+			if(i==0)
+			{name = "one";}
+			else if(i==1)
+			{name = "two";}
+			else if(i==2)
+			{name = "three";}
+			else if(i==3)
+			{name = "four";}
+			else if(i==4)
+			{name = "five";}
+			$(".img img").fadeOut(1000);
+			$(".img img[i]").fadeIn(1000);
+			
+		}*/
+</script>
+<script type="text/javascript">
+var canvas=document.getElementById('myCanvas');
+var ctx=canvas.getContext('2d');
+ctx.fillStyle='#FF0000';
+ctx.fillRect(0,0,80,100);
+</script>
+<script>
+function Move()
+{
+	alert("fdsf");
+}
+</script>
+</body>
+</html>

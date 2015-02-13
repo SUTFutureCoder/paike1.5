@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+	font-size:微软雅黑;
+	background-color:#EBEAEB;
+	margin-left:-10px;
+	margin-top:30px;
+}
+#dh_one li
+{
+	list-style:none;
+	line-height:30px;
+	width:110px;
+	text-align:center;
+	margin-top:7px;
+	background-color:#1D1B17;
+	color:#FFF;
+	font-size:微软雅黑;
+	border-radius:2px;
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	background-image:-webkit-gradient(linear,0 0,0 30,from(hsla(0,0%,100%,.3)),to(hsla(0,0%,100%,0)));
+}
+#dh_one a
+{
+	text-decoration:none;
+	color:#FFF;
+	line-height:30px;
+	width:110px;
+	cursor:pointer;
+}
+#dh_one li:hover
+{
+	background-color:#000;
+	
+}
+#dh_one span
+{
+	display:none;
+}
+#dh_one span li
+{
+	background-color:#333;
+	line-height:25px;
+	font-size:13px;
+	width:90px;
+	margin-top:2px;
+	margin-left:10px;
+}
+/*
+教师管理 课程管理页面
+*/
+div.teacher_info
+	{
+		margin:0 auto;
+		width:800px;
+		font-size:14px;
+		margin-top:40px;
+	}
+	.teacher_info table
+	{
+		border:0;
+		cellpadding:2;
+		cellspacing:0;
+		border-collapse: collapse;
+		width:500px;
+	}
+	.teacher_info tr
+	{
+		height:28px;
+		border-bottom-left-radius:13px;
+	}
+	.teacher_info tr:nth-child(2n+1)
+	{
+		background-color:#FFF;
+	}
+	.teacher_info tr:hover
+	{
+		background-color:#B6C6D7;
+	}
+	.teacher_info a
+	{
+		text-decoration:none;
+		color:#000;
+	}
+	.teacher_info a:hover
+	{
+		text-decoration:underline;
+		cursor:pointer;
+		color:#09C;
+	}
+	.teacher_info img
+	{
+		width:16px;
+		margin-bottom:-2px;
+	}
+	#up img:hover
+	{
+		cursor:pointer;
+	}
+	#up div
+	{
+		line-height:30px;
+		margin-left:40px;
+	}
+	#up span
+	{
+		background-color:#EBEAEB;
+		border:3px solid #FFF;
+		text-align:center;
+	}
+	#update_course
+	{
+		position:absolute;
+		top:120px;
+		left:0;
+		background-color:#EBEAEB;
+		width:285px;
+		height:200px;
+		z-index:1000000;
+		border-radius:5px;
+		padding-top:50px;
+		padding-left:50px;
+		display:none;
+	}
+	.admin_so_teacher_name
+	{
+		height:35px;
+	}
+	.admin_so_teacher_name input
+	{
+		
+		height:20px;
+		padding:1px 15px;
+		border-radius:10px;
+		border:1px solid #CCC;
+		outline:none;
+		color:#999;
+		width:100px;
+	}
+	
+	.admin_so_teacher_name input:focus
+	{
+		border:1px solid #F48C12;
+	}
+	.admin_so_teacher_name img
+	{
+		margin-bottom:-5px;
+		border-radius:5px;
+		border:1px solid #EBEAEB;
+		width:auto;
+		
+	}
+	.admin_so_teacher_name img:hover
+	{
+		border:1px solid #CCC;
+	}
+	#tips_input_tName
+	{
+		color:#999;
+		position:absolute;
+		left:85px;
+		font-size:14px;
+	}

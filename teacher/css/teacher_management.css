@@ -1,0 +1,441 @@
+@charset "utf-8";
+@import url("reset.css");
+/* CSS Document */ 
+body
+{
+	width:100%;
+	margin:auto;
+	font-family:'微软雅黑';
+	font-size:large;
+	background-color:#9B937F;
+	/*background-image:url(../../image/bg.jpg);
+	background-repeat:repeat;*/
+	
+}
+
+#contest div.header_fyw{
+	background-color:#1D1B17;
+	/*background-color:rgba(0,0,0,.9);*/
+	height:45px;
+	margin-top:-4px;
+	margin-left:-20px;
+	margin-right:-20px;
+	box-shadow:0px 0px 50px #FFF;
+	background-image:-moz-linear-gradient(hsla(0,0%,100%,.6),hsla(0,0%,100%,0) 30px);
+	background-image:-webkit-gradient(linear,0 0,0 30,from(hsla(0,0%,100%,.3)),to(hsla(0,0%,100%,0)));
+}
+
+.header_text{
+	color:#FFF;
+	}
+li
+{
+	text-align:center;
+	display:inline;
+	float:left;
+	list-style:none;
+}
+.header_text ul a
+{
+	text-decoration:none;
+	color:#FFF;
+	font-size:16px;
+	cursor:pointer;
+	line-height:45px;
+	 display:block;
+	 width:120px;
+}
+.header_first:hover{
+	background-color:#000;
+	cursor:pointer;
+	text-shadow:0 0 10px #FFF;
+}
+
+#contest{
+	background-color:#FFF;
+	position:relative;
+	top:40px;
+	width:1000px;
+	height:800px;
+	margin:0 auto;
+	box-shadow:0px 0px 50px #000;
+	border-radius:5px;
+}
+
+.triangle1
+{
+	margin-left:-20px;
+	border:solid;
+	border-color:transparent #1D1B17 transparent transparent;
+	border-color:transparent rgba(0,0,0,.7) transparent transparent;
+	border-width:0 20px 20px 0;
+	width:0;
+	height:0;
+}
+.triangle2
+{
+	margin-right:-20px;
+	margin-top:-20px;
+	float:right;
+	border:solid;
+	border-color:#1D1B17 transparent  transparent transparent;
+	border-color:rgba(0,0,0,.7) transparent  transparent transparent;
+	border-width:20px 20px 0 0;
+	width:0;
+	height:0;
+}
+.sub_title
+{
+	background-color:#6e6e6e;
+	border-radius:4px;
+	margin:0px 0px 7px 0px;
+	padding:7px 15px;
+	box-shadow:#6e6e6e 0 0 3px;
+	color:#f9f9f9;
+	font-size:20px;
+	text-shadow:#f9f9f9 0 0 2px;
+}
+.del_img
+{
+	width:20px;
+}
+.course_name
+{
+	float:left;
+	clear:left;
+	margin:2px 5px;
+	width:210px;
+}
+.img_container
+{
+	width:20px;
+	text-align:center;
+	float:left;
+}
+#course_id
+{
+}
+#header
+{
+	width:900px;
+}
+#teacher_info_container
+{
+	float:left;
+	width:510px;
+}
+#teacher_info_table
+{
+	font-size:20px;
+	color:#606060;
+}
+#upload_button
+{
+	float:left;
+/*	background-color:#2d2d2d;
+*/	box-shadow:#2d2d2d 0 0 3px;
+	border-radius:5px;
+	margin-left:15px;
+	margin-top:4px;
+}
+#schedule_button
+{
+	float:left;
+/*	background-color:#2d2d2d;
+*/	box-shadow:#2d2d2d 0 0 3px;
+	border-radius:5px;
+	margin-left:15px;
+	margin-top:4px;
+}
+#upload_img
+{
+	width:150px;
+}
+#schedule_img
+{
+	width:150px;
+	border:0px;
+}
+#info
+{
+	width:850px;
+	height:100px;
+	padding:15px;
+	margin:5px auto;
+	border-radius:8px;
+	box-shadow:inset #000 0 0 3px;
+}
+#func
+{
+	width:900px;
+	margin:auto;
+	overflow:hidden;
+}
+#disp_course
+{
+	float:left;
+	width:252px;
+	padding:15px;
+	margin:9px;
+	border-radius:8px;
+	box-shadow:inset #000 0 0 3px;
+}
+#add_course
+{
+	float:left;
+	width:252px;
+	height:180px;
+	padding:15px;
+	margin:9px;
+	border-radius:8px;
+	box-shadow:inset #000 0 0 3px;
+}
+#modify_psw
+{
+	float:left;
+	width:252px;
+	height:180px;
+	padding:15px;
+	margin:9px;
+	border-radius:8px;
+	box-shadow:inset #000 0 0 3px;
+}
+#base_info
+{
+	display:none;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-115px;
+	margin-left:-150px;
+	z-index:10;
+	width:270px;
+	height:170px;
+	background-color:#FFF;
+	border-radius:10px;
+	box-shadow:inset #000 0 0 15px;
+	padding:15px;
+}
+#psw_info
+{
+	display:none;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-115px;
+	margin-left:-150px;
+	z-index:10;
+	width:270px;
+	height:192px;
+	background-color:#FFF;
+	border-radius:10px;
+	box-shadow:inset #000 0 0 15px;
+	padding:15px;
+}
+#upload_info
+{
+	display:none;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-200px;
+	margin-left:-150px;
+	z-index:10;
+	width:300px;
+	height:155px;
+	background-color:#FFF;
+	border-radius:10px;
+	box-shadow:inset #000 0 0 15px;
+	padding:15px;
+}
+table
+{
+	margin:auto;
+}
+.input_text
+{
+	width:160px;
+	height:25px;
+	background-color:#6e6e6e;
+	border-radius:3px;
+	border:0px;
+	color:#f9f9f9;
+	font-family:'微软雅黑';
+	padding-left:5px;
+}
+.button
+{
+	position:relative;
+	background-color:#6e6e6e;
+	font-family:'微软雅黑';
+	border:0px;
+	border-radius:3px;
+	float:right;
+	color:#f9f9f9;
+	padding:4px 10px;
+	font-size:15px;
+	margin-top:2px;
+	text-shadow:#000 0 1px 1px;
+	box-shadow:#6e6e6e 0 0 3px;
+}
+.psw
+{
+	width:160px;
+	height:25px;
+	background-color:#6e6e6e;
+	border-radius:3px;
+	border:0px;
+	color:#f9f9f9;
+	font-family:'微软雅黑';
+	padding-left:5px;
+}
+.button:hover
+{
+	background-color:#2d2d2d;
+	box-shadow:#2d2d2d 0 0 3px;
+}
+.button:active
+{
+	top:1px;
+}
+#base_info_div
+{
+	position:relative;
+	background-color:#6e6e6e;
+	border-radius:3px;
+	box-shadow:#6e6e6e 0 0 5px;
+	margin:10px;
+}
+#base_info_div:hover
+{
+	background-color:#2d2d2d;
+	box-shadow:#2d2d2d 0 0 5px;
+}
+#base_info_div:active
+{
+	top:1px;	
+}
+#psw_info_div
+{
+	position:relative;
+	background-color:#6e6e6e;
+	border-radius:3px;
+	box-shadow:#6e6e6e 0 0 5px;
+	margin:10px;
+}
+#psw_info_div:hover
+{
+	background-color:#2d2d2d;
+	box-shadow:#2d2d2d 0 0 5px;	
+}
+#psw_info_div:active
+{
+	top:1px;
+}
+#mask
+{
+	background-color:#2d2d2d;
+	opacity:0;
+	filter:alpha(opacity=0);
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:-5;
+}
+#school
+{
+	font-family:'微软雅黑';
+	background-color:#6e6e6e;
+	color:#fff;
+	width:165px;
+	border-radius:3px;
+	height:27px;
+}
+.select
+{
+	font-family:'微软雅黑';
+	background-color:#6e6e6e;
+	color:#fff;
+	width:165px;
+	border-radius:3px;
+	height:27px;
+}
+#alert
+{
+	display:none;
+	position:absolute;
+	width:200px;
+	background-color:#2e2e2e;
+	border-radius:5px;
+	overflow:hidden;
+	color:#FFF;
+	top:50%;
+	left:50%;
+	margin-top:-100px;
+	margin-left:-100px;
+	box-shadow:#000 0 0 20px;
+	text-shadow:#999 0 -1px 1px;
+	z-index:20;
+}
+#alert_content
+{
+	display:block;
+	margin:11px;;	
+}
+#alert_img
+{
+	float:left;
+}
+#alert_div
+{
+	width:150px;
+	float:left;
+}
+#yes
+{
+	cursor:pointer;
+	border-radius:3px;
+	margin:5px;
+	text-align:center;
+	width:80px;
+}
+#yes:hover
+{
+	background-color:#fff;
+	color:#2e2e2e;
+}
+#no
+{
+	cursor:pointer;
+	border-radius:3px;
+	margin:5px;
+	text-align:center;
+	width:80px;
+}
+#no:hover
+{
+	background-color:#fff;
+	color:#2e2e2e;
+}
+#file
+{
+	width:210px;
+}
+#course
+{
+	width:210px;
+}
+#log_out
+{
+	font-size:16px;
+	color:#CCC;
+	margin-left:15px;
+	cursor:pointer;
+}
+
+#log_out:hover
+{
+	color:#FFF;
+}

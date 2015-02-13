@@ -1,0 +1,69 @@
+<!DOCTYPE html >
+<head>
+    <meta charset="UTF-8">
+    <title>div相对定位、绝对定位的嵌套效果对比</title>
+    <style type="text/css">
+        body { margin: 30px; font-size: 9pt; }
+        .a, .b, .c, .d, .e { width: 100px; height: 100px; margin: 5 auto; color: #fff; background: #000; }
+        .aa, .bb, .cc, .dd, .ee {width: 10px; height: 10px; overflow: hidden; background: #F90; }
+        .b, .d, .e { position: relative; }
+        .cc, .dd, .ee { position: absolute; }
+		li
+		{
+			text-align:center;
+			display:inline;
+			float:left;
+			list-style:none;
+		}
+    </style>
+</head>
+<body>
+    <form id="form1">
+    <div>
+        <div class="a">
+            <div class="aa">
+            </div>
+            A:均不设置postion，一般嵌套关系
+        </div>
+        <div class="b">
+            <div class="bb">
+            </div>
+            B:仅外div设置relative，一般嵌套关系
+        </div>
+        <div class="c">
+            <div class="cc">
+            </div>
+            C:仅内div设置absolute，文档中为嵌套关系，页面中内div浮起[非float]，相对于页面定位，与外div无关。
+        </div>
+        <div class="d" style="background: #ff0000">
+            <div class="dd">
+            </div>
+            D:外div设置relative，内div设置absolute，内div浮起来并相对于外div定位
+        </div>
+        <div class="d" style="background: #ff0000">
+            <div class="dd" style="position: relative">
+            </div>
+            D:外div设置relative，内div设置relative，内div浮起来并相对于外div定位
+        </div>
+        <div class="e">
+            <div class="ee" style="left: -10px;">
+            </div>
+            E:这个是说明边界问题。-10 != 反向10px间距
+        </div>
+    </div>
+    </form>
+    
+    
+    
+    <br/><br/><br/><br/><br/><br/>
+    <div style="position:relative; width:1000px; height:800px; background-color:#000; margin:0 auto;">
+    	<div></div>
+    	<div style="position:absolute; background-color:#333; height:45px; width:900px;">
+        	<ul>
+            	<li>呵呵</li>
+                <li>哈哈</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

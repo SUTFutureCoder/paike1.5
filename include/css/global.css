@@ -1,0 +1,360 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+	font-family:'微软雅黑';
+	background-color:#EBEAEB;
+}
+
+#contest{
+	background-color:#FFF;
+	/*position:absolute;
+	top:7%;
+	left:13%;
+	margin-left:auto;
+	margin-right:auto;*/
+	position:relative;
+	top:20px;
+	margin:0 auto;
+	width:1000px;
+	height:800px;
+	
+	box-shadow:0px 0px 50px #000;
+	border-radius:5px;
+}
+  
+.body_pos
+{
+	/*background-image:url(../../image/bg.jpg);
+	background-repeat:repeat;*/
+	background-color:#9B937F;
+	background-attachment:fixed;
+	font-family:'微软雅黑';
+}
+.input_text
+{
+	height:25px;
+
+	border-radius:3px;
+	border:1px solid;
+	border-color:#000;
+
+	font-family:'微软雅黑';
+	padding-left:5px;
+}
+.psw
+{
+	width:160px;
+	height:25px;
+	background-color:#6e6e6e;
+	border-radius:3px;
+	border:0px;
+	color:#f9f9f9;
+	font-family:'微软雅黑';
+	padding-left:5px;
+}
+/*.button
+{
+	position:relative;
+
+	font-family:'微软雅黑';
+	border:1px solid;
+	border-color:#09F;
+	border-radius:3px;
+	padding:4px 10px;
+	font-size:15px;
+	margin-top:2px;
+	
+	box-shadow:#6e6e6e 0 0 3px;
+}
+
+.button:hover
+{
+	background-color:#C6B19A;
+	box-shadow:#2d2d2d 0 0 3px;
+	color:#FFF;
+}
+.button:active
+{
+	top:1px;
+}*/
+.button {
+	line-height:20px;
+	font-size:14px;
+	text-align:center;
+	padding:7px 15px;
+	background-color:#1D1B17;
+	color:#FFF;
+	border:solid;
+	border-width:1px;
+	font-family:微软雅黑;
+	border-radius:4px;
+	background-image:-webkit-gradient(linear,0 0,0 30,from(hsla(0,0%,100%,.3)),to(hsla(0,0%,100%,0)));
+
+}
+.button:hover {
+	background-color:#000;
+	cursor:pointer;
+   box-shadow:0px 0px 30px #CCC;
+   border-radius:1px;
+   text-shadow:0 0 10px #FFF;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+select
+{
+	font-family:'微软雅黑';
+	/*background-color:#6e6e6e;
+	color:#fff;
+	width:165px;*/
+	border-radius:3px;
+	height:27px;
+}
+.a
+{
+	display:block;
+
+	border:1px solid;
+	border-radius:3px;
+	border-color:#09F;
+	color:#000;
+	padding:4px 10px;
+	margin-top:2px;
+
+	box-shadow:#6e6e6e 0 0 3px;
+	text-decoration:none;
+}
+.a:hover
+{
+	background-color:#C6B19A;
+	color:#FFF;
+	box-shadow:#2d2d2d 0 0 3px;	
+}
+.prime_a
+{
+	font-size:13px;
+	cursor:pointer;
+	color:#000;
+	text-decoration:none;
+}
+.prime_a:hover
+{
+	color:#0CF;
+}
+
+table
+{
+	border-collapse:collapse;
+	font-size:15px;
+	/*border-color:#000;*/
+}
+
+#up{
+	position:absolute;
+	background-color:#ffffff;
+	/*opacity:0.5;
+	filter:alpha(opacity=50);IE6 */
+	/*-moz-opacity:0.5;  Mozilla */
+	/*-khtml-opacity:0.5;  Safari */
+	left:50%;
+	top:300px;
+	margin-top:-205px;
+	margin-left:-200px;
+	z-index:6;
+	border-radius:6px;
+	-webkit-box-shadow:0 3px 7px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+#mask
+{
+	background-color:#2d2d2d;
+	opacity:0;
+	filter:alpha(opacity=0);
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	z-index:-5;
+}
+
+.course_text{
+margin-left:10px;
+margin-top:2px;
+}
+.header{
+	background-color:#1D1B17;
+	/*background-color:rgba(0,0,0,.9);*/
+	height:45px;
+	
+	margin-left:-20px;
+	margin-right:-20px;
+	box-shadow:0px 0px 50px #FFF;
+	background-image:-moz-linear-gradient(hsla(0,0%,100%,.3),hsla(0,0%,100%,0) 30px);
+	background-image:-webkit-gradient(linear,0 0,0 30,from(hsla(0,0%,100%,.3)),to(hsla(0,0%,100%,0)));
+}
+
+.triangle1
+{
+	margin-left:-20px;
+	border:solid;
+	border-color:transparent #1D1B17 transparent transparent;
+	border-color:transparent rgba(0,0,0,.7) transparent transparent;
+	border-width:0 20px 20px 0;
+	width:0;
+	height:0;
+}
+.triangle2
+{
+	margin-right:-20px;
+	margin-top:-20px;
+	float:right;
+	border:solid;
+	border-color:#1D1B17 transparent  transparent transparent;
+	border-color:rgba(0,0,0,.7) transparent  transparent transparent;
+	border-width:20px 20px 0 0;
+	width:0;
+	height:0;
+}
+.header_text{
+	color:#FFF;
+	}
+.header_first
+{
+	 line-height:45px;
+	 display:block;
+	 width:120px;
+}
+.header_text li
+{
+	text-align:center;
+	display:inline;
+	float:left;
+	list-style:none;
+}
+.header_first
+{
+	text-decoration:none;
+	color:#FFF;
+	font-size:16px;
+	cursor:pointer;
+}
+.header_first:hover{
+	background-color:#000;
+	text-shadow:1px 1px 1px hsla(0,0%,100%,.1);
+	cursor:pointer;
+	text-shadow:0 0 20px #FFF;
+}
+.some_select
+{
+	position:absolute;
+	top:40px;
+	left:646px;
+	z-index:10;
+	display:none;
+}
+.some_select li
+{
+	clear:both;
+	list-style:none;
+	line-height:40px;
+	background-color:#1D1B17;
+	/*background-color:rgba(0,0,0,.9);*/
+	color:#FFF;
+	text-align:center;
+	width:120px;
+	cursor:pointer;
+	border-top:1px solid #FFF;
+	background-image:-webkit-gradient(linear,0 0,0 25,from(hsla(0,0%,100%,.1)),to(hsla(0,0%,100%,0)));
+	
+		
+}
+.some_select li:hover
+{
+	background-color:#000;
+	text-shadow:0 0 20px #FFF;
+
+	
+}
+.header_first:hover ul{
+	display:block;
+	
+}
+
+/*========回顶部========*/
+.backtotop:hover {
+	background-color: #000;
+	background-position: -135px -207px;
+}
+.backtotop:hover img
+{
+	display:block;
+	position: fixed;
+	bottom: 100px;
+	_bottom: 100px;
+	right: 81px;
+	z-index: 1001;
+	zoom: 1;
+}
+.backtotop {
+	float: left;
+	display: block;
+	width: 50px;
+	height: 50px;
+	background: #333 url(http://a.xnimg.cn/n/core/cssimg/home.png) no-repeat -135px -249px;
+	margin-bottom: 15px;
+	outline: 0 none;
+	text-indent: -9999em;
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	position: relative;
+}
+.back-to {
+	position: fixed;
+	bottom: 35px;
+	_bottom: 35px;
+	right: 40px;
+	z-index: 1001;
+	width: 100px;
+	zoom: 1;
+}
+/*========如：100405201========*/
+.up_tips
+{
+	color:#666;
+	font-size:14px;
+}
+
+/*======== footer ========*/
+.footer
+{
+	/*background:#000;
+	color:#CCC;
+	padding:15px 100px;*/
+}
+
+.WB_global_nav {
+	background: url("../../../images/global_nav/bg_nav.png?id=1345196970876") repeat-x 0 0;
+	_background-image: url("../../../images/global_nav/bg_nav.gif?id=1345196970876");
+	position: fixed;
+	_position: absolute;
+	height: 39px;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	-webkit-box-shadow: 0px 1px 3px 0px #000;
+	-moz-box-shadow: 0px 1px 3px 0px #000;
+	box-shadow: 0px 1px 3px 0px #000;
+}
+
+.admin_tips
+{
+	font-size:14px;
+	line-height:30px;
+	color:#999;
+}

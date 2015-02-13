@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS Document */
+/*网页整体框架布局*/
+body
+{
+	background-image:url(../../image/bg.jpg);
+	background-repeat:repeat;
+	background-attachment:fixed;
+	font-family:'微软雅黑';
+}
+#container
+{
+	position:relative;
+	left:0;
+	top:0;
+	background-color:#FFF;
+	width:1000px;
+	height:800px;
+	margin:0 auto;
+	margin-top:40px;
+	box-shadow:0px 0px 50px #000;
+	border-radius:5px;
+}
+#header
+{
+	position:absolute;
+	margin-left:-15px;
+	width:1030px;
+	
+	background-color:#333;
+	box-shadow:0px 0px 50px #FFF;	
+}
+#pageBody
+{
+	position:relative;
+	top:85px;
+}
+#footer
+{
+}
+
+
+/*========导航栏========*/
+.header_first
+{
+	line-height:45px;
+	display:block;
+	width:120px;
+	text-decoration:none;
+	color:#FFF;
+	font-size:16px;
+	cursor:pointer;	 
+}
+#header li
+{
+	text-align:center;
+	display:inline;
+	float:left;
+	list-style:none;
+}
+.li_first
+{
+	margin-left:45px;
+}
+.header_first:hover{
+	background-color:#000;
+	cursor:pointer;
+}
+.some_select
+{
+	position:absolute;
+	top:31px;
+	z-index:10;
+	display:none;
+}
+.some_select li
+{
+	clear:both;
+	list-style:none;
+	line-height:40px;
+	background-color:#333;
+	color:#FFF;
+	text-align:center;
+	width:120px;
+	cursor:pointer;
+	border-top:1px solid #FFF;
+		
+}
+.some_select li:hover
+{
+	background-color:#000;
+	
+}
+.header_first:hover ul
+{
+	display:block;
+}
+
+/*========遮罩层========*/
+#mask
+{
+	display:none;
+	background-color:#2d2d2d;
+	opacity:0;
+	filter:alpha(opacity=0);
+	width:100%;
+	height:100%;
+	position:fixed;/*全覆盖关键代码*/
+	top:0px;
+	left:0px;
+	z-index:-5;
+}
+#up{
+	position:absolute;
+	background-color:#ffffff;
+	/*opacity:0.5;
+	filter:alpha(opacity=50);IE6 */
+	/*-moz-opacity:0.5;  Mozilla */
+	/*-khtml-opacity:0.5;  Safari */
+	left:50%;
+	top:300px;
+	margin-top:-205px;
+	margin-left:-200px;
+	z-index:20;
+	border-radius:8px;
+	box-shadow:inset 0 0 10px #000000;
+}
+
+/*========表单样式========*/
+.input_text
+{
+	height:25px;
+
+	border-radius:3px;
+	border:1px solid;
+	border-color:#000;
+
+	font-family:'微软雅黑';
+	padding-left:5px;
+}
+.button
+{
+	position:relative;
+	font-family:'微软雅黑';
+	border:1px solid;
+	border-color:#09F;
+	border-radius:3px;
+	padding:4px 10px;
+	font-size:15px;
+	margin-top:2px;
+	
+	box-shadow:#6e6e6e 0 0 3px;
+}
+.button:hover
+{
+	background-color:#C6B19A;
+	box-shadow:#2d2d2d 0 0 3px;
+	color:#FFF;
+}
+.button:active
+{
+	top:1px;
+}
+select
+{
+	font-family:'微软雅黑';
+	/*background-color:#6e6e6e;
+	color:#fff;
+	width:165px;*/
+	border-radius:3px;
+	height:27px;
+}
+
+/*========ajax返回数据之表格样式========*/
+#result_query
+{
+	width:100%;
+	display:inline;
+}
+table
+{
+	border-collapse:collapse;
+	font-size:15px;
+	/*border-color:#000;*/
+}

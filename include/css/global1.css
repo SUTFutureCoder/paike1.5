@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+	font-family:'微软雅黑';
+}
+.input_text
+{
+	height:25px;
+
+	border-radius:3px;
+	border:1px solid;
+	border-color:#000;
+
+	font-family:'微软雅黑';
+	padding-left:5px;
+}
+.button
+{
+	position:relative;
+
+	font-family:'微软雅黑';
+	border:1px solid;
+	border-color:#09F;
+	border-radius:3px;
+	padding:4px 10px;
+	font-size:15px;
+	margin-top:2px;
+	
+	box-shadow:#6e6e6e 0 0 3px;
+}
+.psw
+{
+	width:160px;
+	height:25px;
+	background-color:#6e6e6e;
+	border-radius:3px;
+	border:0px;
+	color:#f9f9f9;
+	font-family:'微软雅黑';
+	padding-left:5px;
+}
+.button:hover
+{
+	background-color:#C6B19A;
+	box-shadow:#2d2d2d 0 0 3px;
+	color:#FFF;
+}
+.button:active
+{
+	top:1px;
+}
+select
+{
+	font-family:'微软雅黑';
+	/*background-color:#6e6e6e;
+	color:#fff;
+	width:165px;*/
+	border-radius:3px;
+	height:27px;
+}
+.a
+{
+	display:block;
+
+	border:1px solid;
+	border-radius:3px;
+	border-color:#09F;
+	color:#000;
+	padding:4px 10px;
+	margin-top:2px;
+
+	box-shadow:#6e6e6e 0 0 3px;
+	text-decoration:none;
+}
+.a:hover
+{
+	background-color:#C6B19A;
+	color:#FFF;
+	box-shadow:#2d2d2d 0 0 3px;	
+}
+.prime_a
+{
+	font-size:13px;
+	cursor:pointer;
+	color:#000;
+	text-decoration:none;
+}
+.prime_a:hover
+{
+	color:#0CF;
+}
+

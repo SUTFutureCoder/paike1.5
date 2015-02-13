@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+#contest{
+	background-color:#FFF;
+	position:absolute;
+	top:7%;
+	left:11.5%;
+	width:77%;
+	height:120%;
+	margin-left:auto;
+	margin-right:auto;
+	box-shadow:0px 0px 50px #000;
+	border-radius:5px;
+}
+body
+{
+	background-image:url(../../image/bg.jpg);
+	background-repeat:repeat;
+	background-attachment:fixed;
+
+
+	font-family:'微软雅黑';
+}
