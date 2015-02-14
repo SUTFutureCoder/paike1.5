@@ -116,15 +116,16 @@ function GetClassCol($conn, $course_class){
     return $class;
 }
 //是否导出所有教师数据并打包
-$global = 1;
+$global = DB::CheckInput($_POST['global']);
+//$global = 0;
     
 //指定导出的教师名
 $teacher = '';
 
 
 if (!$global){
-//    $teacher = DB::CheckInput($_POST['teacher']);
-    $teacher = '张胜男';
+    $teacher = DB::CheckInput($_POST['teacher']);
+//    $teacher = '修国一';
             
     //填充课程表
     $lesson_sheet = array();
@@ -217,7 +218,7 @@ if (!$global){
     }
     
     $objPHPExcel->getActiveSheet()->getColumnDimension('A')->setWidth(20);
-    $objPHPExcel->getActiveSheet()->getColumnDimension('B')->setWidth(18);
+    $objPHPExcel->getActiveSheet()->getColumnDimension('B')->setWidth(20);
     $objPHPExcel->getActiveSheet()->getColumnDimension('C')->setWidth(25);
     $objPHPExcel->getActiveSheet()->getColumnDimension('D')->setWidth(25);
     $objPHPExcel->getActiveSheet()->getColumnDimension('E')->setWidth(20);
@@ -260,7 +261,7 @@ if (!$global){
     foreach ($lesson_sheet as $lesson_sheet_item){
         $current_cell = chr(ord('A') + $lesson_sheet_item['zhou']) . ($lesson_sheet_base_row + $lesson_sheet_item['jie'] - 1);
         $objPHPExcel->getActiveSheet()->getStyle($current_cell)->getAlignment()->setWrapText(TRUE);
-        $string = $objPHPExcel->getActiveSheet()->getCell($current_cell)->getValue() . ('第' . $lesson_sheet_item['week'] . '周-' . $lesson_sheet_item['address']) . "\n";
+        $string = $objPHPExcel->getActiveSheet()->getCell($current_cell)->getValue() . ('第' . $lesson_sheet_item['week'] . '周-' . mb_substr($lesson_sheet_item['address'], 4) . '-' . mb_substr($lesson_sheet_item['course'], 0, 5)) . "\n";
         $objPHPExcel->getActiveSheet()->setCellValue($current_cell, $string);
     }
     
@@ -367,7 +368,7 @@ if (!$global){
 
 
         $objPHPExcel->getActiveSheet()->getColumnDimension('A')->setWidth(20);
-        $objPHPExcel->getActiveSheet()->getColumnDimension('B')->setWidth(18);
+        $objPHPExcel->getActiveSheet()->getColumnDimension('B')->setWidth(20);
         $objPHPExcel->getActiveSheet()->getColumnDimension('C')->setWidth(25);
         $objPHPExcel->getActiveSheet()->getColumnDimension('D')->setWidth(25);
         $objPHPExcel->getActiveSheet()->getColumnDimension('E')->setWidth(20);
@@ -420,7 +421,7 @@ if (!$global){
         foreach ($lesson_sheet as $lesson_sheet_item){
             $current_cell = chr(ord('A') + $lesson_sheet_item['zhou']) . ($lesson_sheet_base_row + $lesson_sheet_item['jie'] - 1);
             $objPHPExcel->getActiveSheet()->getStyle($current_cell)->getAlignment()->setWrapText(TRUE);
-            $string = $objPHPExcel->getActiveSheet()->getCell($current_cell)->getValue() . ('第' . $lesson_sheet_item['week'] . '周-' . $lesson_sheet_item['address']) . "\n";
+            $string = $objPHPExcel->getActiveSheet()->getCell($current_cell)->getValue() . ('第' . $lesson_sheet_item['week'] . '周-' . mb_substr($lesson_sheet_item['address'], 4) . '-' . mb_substr($lesson_sheet_item['course'], 0, 5)) . "\n";
             $objPHPExcel->getActiveSheet()->setCellValue($current_cell, $string);
         }
 
