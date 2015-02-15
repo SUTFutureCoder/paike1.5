@@ -56,7 +56,7 @@ td{
 <?php
 $sql_school = "SELECT * FROM `ini_school` WHERE 1";
 $result_school = $conn->query($sql_school);
-while($info_school = $conn->fetch_array($result_school))
+while($info_school = $result_school->fetch_array())
 {
 	echo "<option value = \"".$info_school['school_id']."\">".$info_school['school']."</option>";
 }

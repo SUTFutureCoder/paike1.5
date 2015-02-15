@@ -116,7 +116,7 @@ function GetClassCol($conn, $course_class){
     return $class;
 }
 //是否导出所有教师数据并打包
-$global = DB::CheckInput($_POST['global']);
+$global = DB::CheckInput($_GET['global']);
 //$global = 0;
     
 //指定导出的教师名
@@ -124,9 +124,14 @@ $teacher = '';
 
 
 if (!$global){
-    $teacher = DB::CheckInput($_POST['teacher']);
+    $teacher = DB::CheckInput($_GET['teacher']);
 //    $teacher = '修国一';
-            
+    $sql_confirm = sprintf('SELECT teacher_name FROM teacher WHERE teacher_name = "%s"', $teacher);
+    $confirm_result = $conn->query($sql_confirm);
+    if (!$confirm_result->num_rows){
+        echo '<script>alert("抱歉，数据库中没有查到该老师姓名")</script>';
+        exit();
+    }
     //填充课程表
     $lesson_sheet = array();
     
@@ -134,10 +139,20 @@ if (!$global){
     $date = str_split($db_year, 4);    
     $file_name = $teacher . '-' . $date[0] . '年度第' . $date[1] . '学期实验室安排表.xls';
     
+    
+    $sql = "SELECT `time_add`,`course_id`,`course_class`,`tips` FROM `teacher_sj_schedule` WHERE time_add like '$db_year%' AND course_class!='' AND course_id  in (SELECT course_id FROM `course` WHERE teacher_id in (select teacher_id from teacher where teacher_name like'%" . $teacher . "%')) ORDER BY time_add";    
+    $result = $conn->query($sql);
+    
+    if (!$result){
+        echo 0;
+        exit();
+    }
+    
+    
     $objPHPExcel = new PHPExcel();
     $objWriter = new PHPExcel_Writer_Excel5($objPHPExcel);
     
-    $objPHPExcel->getProperties()->setCreator("SUTACM-*Chen");
+    $objPHPExcel->getProperties()->setCreator('SUTACM-Paike System');
     
     //填充
     $objPHPExcel->getActiveSheet()->setCellValue('A1', '姓名');
@@ -173,9 +188,6 @@ if (!$global){
     $objPHPExcel->getActiveSheet()->getStyle('E2')->getFont()->setBold(true);
     
     
-    
-    $sql = "SELECT `time_add`,`course_id`,`course_class`,`tips` FROM `teacher_sj_schedule` WHERE time_add like '$db_year%' AND course_class!='' AND course_id  in (SELECT course_id FROM `course` WHERE teacher_id in (select teacher_id from teacher where teacher_name like'%" . $teacher . "%')) ORDER BY time_add";    
-    $result = $conn->query($sql);
     
     $i = 3;
     while ($row = $result->fetch_assoc()){
@@ -227,6 +239,7 @@ if (!$global){
     $objPHPExcel->getActiveSheet()->getColumnDimension('H')->setWidth(20);
     
     $i += 2;
+    $objPHPExcel->getActiveSheet()->setCellValue('A' . $i, $teacher);
     $objPHPExcel->getActiveSheet()->setCellValue('B' . $i, '星期一');
     $objPHPExcel->getActiveSheet()->setCellValue('C' . $i, '星期二');
     $objPHPExcel->getActiveSheet()->setCellValue('D' . $i, '星期三');
@@ -269,14 +282,14 @@ if (!$global){
     
     //准备文件名
     $date = str_split($db_year, 4);
-    $file_name = $date[0] . '年度第' . $date[1] . '学期实验室安排表.xls';
+    $file_name = $date[0] . '年度第' . $date[1] . '学期实验室安排表[教师].xls';
     
     $objPHPExcel = new PHPExcel();
     $objWriter = new PHPExcel_Writer_Excel5($objPHPExcel);
     
-    $objPHPExcel->getProperties()->setCreator("SUTACM-*Chen");
+    $objPHPExcel->getProperties()->setCreator('SUTACM-Paike System');
     
-    //获取所有教师
+    //获取所有教师 
     $sql = "SELECT teacher_id, teacher_name FROM teacher WHERE teacher_id >= '10000'";
     $teacher_query_result = $conn->query($sql);     
     
@@ -326,7 +339,7 @@ if (!$global){
 
         $sql = "SELECT `time_add`,`course_id`,`course_class`,`tips` FROM `teacher_sj_schedule` WHERE time_add like '$db_year%' AND course_class!='' AND course_id  in (SELECT course_id FROM `course` WHERE teacher_id = " . $teacher_row['teacher_id'] . ")ORDER BY time_add";    
         $result = $conn->query($sql);
-
+        
         $i = 3;
         while ($row = $result->fetch_assoc()){
             //第一列
@@ -387,6 +400,7 @@ if (!$global){
         $objPHPExcel->getActiveSheet()->getColumnDimension('H')->setWidth(20);
 
         $i += 2;
+        $objPHPExcel->getActiveSheet()->setCellValue('A' . $i, $teacher_row['teacher_name']);
         $objPHPExcel->getActiveSheet()->setCellValue('B' . $i, '星期一');
         $objPHPExcel->getActiveSheet()->setCellValue('C' . $i, '星期二');
         $objPHPExcel->getActiveSheet()->setCellValue('D' . $i, '星期三');
