@@ -9,7 +9,7 @@
 	$result = $conn->query($sql);
 	if($result)
 	{
-		$row = $conn->affected_rows();
+		$row = $conn->affected_rows;
 //		echo $row;
 		if($row)
 		{

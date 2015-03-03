@@ -26,7 +26,7 @@
 			{
 				$sql1="UPDATE teacher_sj_schedule SET `course_id` = '$course_id',`course_class`=concat(`course_class`,'$course_class@'),`lock`='2',tips='$tips' WHERE `time_add` = '$time_add' AND (`lock`=1 or `course_id`='$course_id')";
 				$conn->query($sql1);
-				$row = $conn->affected_rows();
+				$row = $conn->affected_rows;
 				//echo $sql1."fanyiwei".$row;
 				if($row)
 				{
@@ -45,7 +45,7 @@
 	{
 		$sql1="UPDATE teacher_sj_schedule SET course_id = '$course_id',`lock`='2',tips='$tips' WHERE time_add = '$time_add' AND (`lock`=1 or `course_id`='$course_id')";
 		$conn->query($sql1);
-		$row = $conn->affected_rows();
+		$row = $conn->affected_rows;
 				//echo $sql1."fanyiwei".$row;
 		if($row)
 		{

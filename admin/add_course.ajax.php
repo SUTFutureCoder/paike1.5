@@ -7,7 +7,7 @@
 
 	$sql = 'INSERT INTO course VALUES (\''.$course_id.'\',\''.$teacher_id.'\',\''.$course_name.'\',\''.$course_hour.'\')';
 	$conn->query($sql);
-	if($conn->affected_rows())
+	if($conn->affected_rows)
 	{
 		echo '1';
 	}

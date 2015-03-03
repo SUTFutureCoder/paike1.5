@@ -8,7 +8,7 @@ $tips = DB::CheckInput($_POST['tips']);
 
 $sql1="UPDATE teacher_sj_schedule SET course_id = '$course_id',course_class='$course_class',`lock`='0',tips='$tips' WHERE time_add = '$time_add' AND `lock`='1'";
 $conn->query($sql1);
-$row = $conn->affected_rows();
+$row = $conn->affected_rows;
 		//echo $sql1."fanyiwei".$row;
 if($row)
 {

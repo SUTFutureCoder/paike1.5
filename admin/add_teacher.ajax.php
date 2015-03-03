@@ -19,7 +19,7 @@
 			$insert_result = $conn->query($sql);
 //			echo $sql;
 //			echo $insert_result;
-			$row = $conn->affected_rows();
+			$row = $conn->affected_rows;
 			if($insert_result)
 			{
 				echo '1';	

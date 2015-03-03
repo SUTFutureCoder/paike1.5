@@ -32,7 +32,7 @@ for($i = 1;$i<=20;$i++)
 $sql = substr($sql,0,-1);
 $sql = "INSERT INTO `teacher_sj_schedule`(`time_add`) VALUES".$sql;
 $conn->query($sql);
-if($conn->affected_rows()==-1)
+if($conn->affected_rows == -1)
 {
 	echo '0';
 }

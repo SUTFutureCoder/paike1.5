@@ -32,7 +32,7 @@ session_start();
 					move_uploaded_file($_FILES['file']['tmp_name'],'../../downloads/'.$filename);
 					$sql = "INSERT INTO `file`(`teacher_id`, `course_id`, `file_name`, `file_type`) VALUES ('" . $_SESSION['teacher_id'] . "','" . DB::CheckInput($_POST['course']) . "','".$filename_sql."','".$_FILES['file']['type']."')";
 					$conn->query($sql);
-					if($conn->affected_rows())
+					if($conn->affected_rows)
 					{
 						echo '<script>alert(\'上传成功.\');</script>';	
 					}
