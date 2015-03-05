@@ -8,7 +8,7 @@
 
 ---
 
-数据库连接文件在**paike1.5/include/conn.php**第32行。
+数据库连接在**paike1.5/include/conn.php**第32行。
 
 ---
 ###DEMO 示例
