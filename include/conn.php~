@@ -29,7 +29,7 @@ class DB{
 }
 
 
-$conn = DB::SetConn('localhost', 'root', '', 'paike');
+$conn = DB::SetConn('localhost', 'root', '000000', 'paike');
 if ($conn->connect_error) {
     die('数据库链接错误 (' . $conn->connect_errno . ') '
             . $conn->connect_error);
