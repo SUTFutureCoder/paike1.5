@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # paike1.5 - 沈阳工业大学排课系统1.5
 
 ###STAR原则
@@ -11,13 +10,24 @@
 
 ###DEMO 示例
 
-####登录界面
-![登录界面]()
+####主界面
+![主界面](https://github.com/SUTFutureCoder/paike1.5/blob/master/example-img/paike_01.png?raw=true)
 
-=======
-# 沈阳工业大学排课系统1.5
-###更新内容  
+####机房课程表
+![机房课程表](https://github.com/SUTFutureCoder/paike1.5/blob/master/example-img/paike_02.png?raw=true)
 
-* 支持即时添加专业，后台js支持错误操作回滚。
-* 新增导出单个/全部 实验室/教师的排课安排至EXCEL表格中，并自动生成易于复印的课程表
->>>>>>> 1a31ab50c96ee439752188bb1d1bacc66c036d44
+####后台主界面
+![后台主界面](https://github.com/SUTFutureCoder/paike1.5/blob/master/example-img/paike_03.png?raw=true)
+
+####进行排课操作
+![进行排课操作](https://github.com/SUTFutureCoder/paike1.5/blob/master/example-img/paike_07.png?raw=true)
+
+
+####导出数据
+![导出数据](https://github.com/SUTFutureCoder/paike1.5/blob/master/example-img/paike_04.png?raw=true)
+
+####导出机房记录
+![导出机房记录](https://github.com/SUTFutureCoder/paike1.5/blob/master/example-img/paike_05.png?raw=true)
+
+####导出教师记录
+![导出教师记录](https://github.com/SUTFutureCoder/paike1.5/blob/master/example-img/paike_06.png?raw=true)
