@@ -29,7 +29,7 @@
 						echo "
 							
 							<li><a href=teacher/teacher_index.php class=header_first>个人中心</a> </li>
-<li><a href=admin/data_dump.php target=_BLANK class=header_first>Excel课表</a></li>
+<li><a href=admin/data_dump.php class=header_first>Excel课表</a></li>
                     		<li><a class=header_first onclick=zhuxiao()>注销</a></li>";
 					}
                     else

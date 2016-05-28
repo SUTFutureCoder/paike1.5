@@ -15,9 +15,9 @@
 session_start();
 if(!isset($_SESSION['teacher_id']))
 	echo "<script>window.top.location.href=\"../teacher/index.php\";</script>";
-else
-	if($_SESSION['limits'] !=0)
-		echo "<script>window.top.location.href=\"../teacher/index.php\";</script>";
+//else
+//	if($_SESSION['limits'] !=0)
+//		echo "<script>window.top.location.href=\"../teacher/index.php\";</script>";
 include "../include/conn.php"; 
 
 $sql_teacher_list = 'SELECT teacher_name FROM teacher WHERE teacher_id >= 10000';

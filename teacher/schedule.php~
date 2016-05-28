@@ -38,8 +38,7 @@ border:1px solid #000000;
                     <li><a href="schedule.php" class="header_first">机房课程表</a></li>
                     <li><a href="../class_shedule.php" class="header_first">班级课程表</a></li>
 			
-                	<li><a href="teacher_index.php" class="header_first">个人中心</a></li>
-			<li><a href="../admin/data_dump.php" target="_BLANK" class="header_first">Excel课表</a></li>
+                	<li><a href="teacher_index.php" class="header_first">个人中心</a></li><li><a href="../admin/data_dump.php" target="_BLANK" class="header_first">Excel课表</a></li>
                     <li><a class="header_first" onclick="zhuxiao()">注销</a></li>
                     <li><a style="margin-left:120px; font-size:14px; width:90px;" href="http://portal.sut.edu.cn/dcp/forward.action?path=/portal/portal&p=HomePage" class="header_first" target="_blank">数字工大</a></li>
                     <li><a style="font-size:14px; width:90px;" href="http://www.sut.edu.cn" class="header_first" target="_blank">工大官网</a></li>
