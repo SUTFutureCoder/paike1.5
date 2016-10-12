@@ -8,7 +8,8 @@
 
 ---
 
-数据库连接在**paike1.5/include/conn.php**第32行。
+数据库连接在**paike1.5/include/conn.php**第32行。部署方法请往下拉，因为是早期作品，所以没有使用MVC。 
+非常感谢关注这个项目！   
 
 ---
 ###DEMO 示例
@@ -34,3 +35,25 @@
 
 ####导出教师记录
 ![导出教师记录](https://github.com/SUTFutureCoder/paike1.5/blob/master/example-img/paike_06.png?raw=true)
+
+##部署方法  
+###STEP1  
+将项目clone到服务器中能访问到的目录（相关技术：安装lamp或lnmp），授予777权限(sudo chmod 777 -R /var/www/html/paike1.5)  
+###STEP2  
+修改php.ini(/etc/php5/apache2/php.ini)中控制最大上传量的参数为128M 初始化完可以改回来
+###STEP3
+导入SQL文件,修改配置文件 include/conn.php第32行    
+###STEP4  
+管理员测试账户：00001 密码 123456  
+教师测试账户：11204 密码 123456  
+###STEP5  
+使用管理员登录，点击左侧学期初始化，对实验室进行初始化。点击校历校准，对学期时间进行校准  
+
+ENJOY (`8`)
+
+##架构介绍  
+本排课系统没有使用MVC框架，而是使用最简单的前后端杂糅方法。后期维护的确是个问题，但因为目前已经毕业，并且秉承不去动能够正常运行代码原则，所以暂时不用框架。    
+前端大量使用jquery框架，并使用ajax向后端异步传值。*.ajax.php 就是传值目标。  
+数据库连接使用单例模式并且做防注入处理。
+使用PHPEXCEL库对课程表进行导出。   
+
